@@ -3,7 +3,7 @@
     import { Navbar, NavBrand, NavLi, NavUl } from "flowbite-svelte";
 </script>
 
-<Navbar>
+<Navbar class="fixed start-0 top-0 z-20 w-full">
     <NavBrand href="/"></NavBrand>
     <NavUl>
         {#each navMenu as navItem (navItem.path) }
