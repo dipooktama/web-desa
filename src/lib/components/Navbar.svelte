@@ -7,7 +7,7 @@
     <NavBrand href="/"></NavBrand>
     <NavUl>
         {#each navMenu as navItem (navItem.path) }
-            <NavLi href={navItem.path}>{navItem.name}</NavLi>
+            <NavLi href={navItem.path} class="text-gray-300">{navItem.name}</NavLi>
         {/each}
     </NavUl>
 </Navbar>
