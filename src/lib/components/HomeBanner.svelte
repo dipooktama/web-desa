@@ -5,7 +5,7 @@
     // Props
     export let autoplay = true;
     export let interval = 5000;
-    export let overlayTexts = Array(images.length).fill('Image Description');
+    // export let overlayTexts = Array(images.length).fill('Image Description');
     export let showIndicators = true;
     export let showArrows = true;
     
@@ -109,9 +109,9 @@
             />
             <div class="absolute inset-0 flex items-center justify-start">
             <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="z-10 px-24 text-start text-white">
-                <h3 class="text-2xl font-bold mb-2">{image.title}</h3>
-                <p class="text-lg">{overlayTexts[index]}</p>
+            <div class="z-10 ml-24 text-start text-white max-w-5xl">
+                <h3 class="text-5xl font-black mb-2 text-balance">{image.title}</h3>
+                <p class="text-lg">{image.subtitle}</p>
             </div>
             </div>
         </div>
