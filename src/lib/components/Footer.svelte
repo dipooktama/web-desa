@@ -5,7 +5,7 @@
 </script>
 
 <Footer footerType="socialmedia">
-    <div class="md:flex md:justify-between">
+    <div class="md:flex md:justify-between px-2">
         <div class="mb-6 md:mb-0 text-sm text-gray-900 dark:text-white">
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 {Address.name}
