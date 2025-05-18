@@ -6,7 +6,7 @@
 
 <Footer footerType="socialmedia">
     <div class="md:flex md:justify-between">
-        <div class="mb-6 md:mb-0">
+        <div class="mb-6 md:mb-0 text-sm text-gray-900 dark:text-white">
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 {Address.name}
             </h2>
@@ -16,22 +16,26 @@
             <p>{Address.city}</p>
             <p>{Address.province}, {Address.postal_code}</p>
         </div>
-        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6 text-sm text-gray-900 dark:text-white">
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 class="mb-6 font-semibold text-gray-900 uppercase dark:text-white">
                     Hubungi Kami
                 </h2>
                 <FooterLinkGroup>
                     {#each Contacts as item }
                         {#if item.type === "phone"}
+                        <div class="flex flex-row gap-4">
                             <PhoneOutline />
                             <FooterLink href="tel:{item.contact}">{item.contact}</FooterLink>
+                        </div>
                         {:else if item.type ==="email"}
+                        <div class="flex flex-row gap-4">
                             <MailBoxOutline />
                             <FooterLink href="mailto:{item.contact}">{item.contact}</FooterLink>
+                        </div>
                         {/if}
                     {/each}
-                    <div class="mt-4 flex space-x-4 sm:mt-0 sm:justify-start rtl:space-x-reverse">
+                    <div class="pt-6 flex space-x-4 sm:mt-0 sm:justify-start rtl:space-x-reverse">
                         {#each Socials as item }
                             <FooterIcon href={item.contact}>
                             {#if item.social_media_type === "ig"}
@@ -41,7 +45,7 @@
                             {/if}
                             </FooterIcon>
                         {/each}
-                        </div>
+                    </div>
                 </FooterLinkGroup>
             </div>
             <div>
