@@ -21,30 +21,37 @@
                 <h2 class="mb-6 font-semibold text-gray-900 uppercase dark:text-white">
                     Hubungi Kami
                 </h2>
-                <FooterLinkGroup>
+                <FooterLinkGroup class="text-gray-900">
                     {#each Contacts as item }
+                    <div class="flex flex-row gap-2">
                         {#if item.type === "phone"}
-                        <div class="flex flex-row gap-4">
-                            <PhoneOutline />
-                            <FooterLink href="tel:{item.contact}">{item.contact}</FooterLink>
-                        </div>
+                        <PhoneOutline />
+                        <FooterLink href="tel:{item.contact}">{item.contact}</FooterLink>
                         {:else if item.type ==="email"}
-                        <div class="flex flex-row gap-4">
-                            <MailBoxOutline />
-                            <FooterLink href="mailto:{item.contact}">{item.contact}</FooterLink>
-                        </div>
+                        <MailBoxOutline />
+                        <FooterLink href="mailto:{item.contact}">{item.contact}</FooterLink>
                         {/if}
+                    </div>
                     {/each}
                     <div class="pt-6 flex space-x-4 sm:mt-0 sm:justify-start rtl:space-x-reverse">
+                        <div class="flex flex-row gap-2">
                         {#each Socials as item }
                             <FooterIcon href={item.contact}>
                             {#if item.social_media_type === "ig"}
                                 <InstagramSolid class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white" />
                             {:else if item.social_media_type === "fb"}
                                 <FacebookSolid class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white" />
+                            {:else if item.social_media_type === "yt"}
+                                <YoutubeSolid class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white" />
+                            {:else if item.social_media_type === "x"}
+                                <TwitterSolid class="h-5 w-5 text-gray-500 hover:text-gray-900 dark:text-gray-500 dark:hover:text-white" />
                             {/if}
                             </FooterIcon>
+                            {#if item.label != undefined}
+                                <p>{item.label}</p>
+                            {/if}
                         {/each}
+                        </div>
                     </div>
                 </FooterLinkGroup>
             </div>
@@ -75,7 +82,7 @@
         </div>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
-    <div class="sm:flex sm:items-center sm:justify-between md:flex md:items-center md:justify-between">
+    <div class="sm:flex sm:items-center sm:justify-between md:flex md:items-center md:justify-center">
         <FooterCopyright spanClass="text-sm text-gray-900 dark:text-gray-200 sm:text-center" href="/" by={Address.name} />
     </div>
 </Footer>

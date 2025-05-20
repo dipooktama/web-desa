@@ -55,11 +55,11 @@ export const PersonalContacts: Contact[] = [
 ]
 
 export const Socials: Contact[] = [
-    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.IG, contact:"https://www.instagram.com/hisbun"},
-    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.FB, contact:"https://www.facebook.com/profile.php?id=100087087031705"},
-    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.X, contact:"https://mobile.twitter.com/pemdeshisbun"},
-    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.YT, contact:"https://www.youtube.com/channel/???"},
-    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.TT, contact:"https://www.tiktok.com/@desa_hibun"}
+    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.IG, label:"@pemdeshisbun", contact:"https://www.instagram.com/hisbun"},
+    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.FB, label:"pemdeshisbun", contact:"https://www.facebook.com/profile.php?id=100087087031705"},
+    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.X, label:"@pemdeshisbun", contact:"https://mobile.twitter.com/pemdeshisbun"},
+    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.YT, label:"@pemdeshisbun", contact:"https://www.youtube.com/channel/???"},
+    {type: ContactType.SOCIAL, social_media_type: SocialMediaType.TT, label:"@pemdes_hisbun", contact:"https://www.tiktok.com/@pemdes_hisbun"}
 ]
 
 export const OuterLinks: Url[] = [
